@@ -1,44 +1,34 @@
-body {background: #ffb457}
-
-
+body {background: #ffb457;
+    line-height: normal;
+    font-weight: 400;
+    }
+html *,html *::before,html *::after {
+    padding: 0;
+    margin: 0;
+}
 
 
 /* Настройка для красивого меню */
-
-html {
-
-    box-sizing: border-box;
-    --bgColorMenu : #1d1d27;
-    --duration: .7s;
-
-}
-
-html *,
-html *::before,
-html *::after {
-
-    box-sizing: inherit;
-
-}
-
-
+/* Это настройка шапки */
 .menu{
-    top: -5px;
-    right: -1140px;
+    --duration: .5s;
+    height: 100px;
     display: flex;
-    /* Works well with 100% width  */
-    width: 950px;
-    font-size: 22px;
-    position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #333;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
     }
 a {
-    color: aliceblue;
-    padding: inherit;
-}
+    font-size: 19px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+   }
 
+/* Тут настройка анимации */
 .menu__item{
 
     all: unset;
@@ -46,14 +36,11 @@ a {
     display: flex;
     padding: 0.55em;
     transition: transform var(--timeOut , var(--duration));
-
 }
 
-
 /* Эта штука отвечает за плавность*/
+
 .menu__item.active {
 
     transform: translate3d(0, -.8em , 0);
 }
-
-
